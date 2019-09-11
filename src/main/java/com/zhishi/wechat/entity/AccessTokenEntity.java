@@ -1,6 +1,6 @@
 package com.zhishi.wechat.entity;
 
-public class AccessTokenEntity extends ErrorEntity{
+public class AccessTokenEntity extends ErrorEntity {
     private String access_token;//获取到的全局token
     private int expires_in;//凭证有效时间，单位：秒
 

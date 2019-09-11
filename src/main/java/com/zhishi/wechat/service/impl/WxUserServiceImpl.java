@@ -3,7 +3,6 @@ package com.zhishi.wechat.service.impl;
 import com.google.gson.Gson;
 import com.zhishi.wechat.controller.WxUserController;
 import com.zhishi.wechat.entity.*;
-import com.zhishi.wechat.entity.dto.UserShareDto;
 import com.zhishi.wechat.service.WxRequestService;
 import com.zhishi.wechat.service.WxUserService;
 import com.zhishi.wechat.util.MD5Util;
@@ -15,8 +14,6 @@ import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import java.sql.Timestamp;
-import java.util.Date;
 
 @Service
 public class WxUserServiceImpl implements WxUserService {

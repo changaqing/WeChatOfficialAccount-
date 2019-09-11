@@ -6,10 +6,8 @@ import com.zhishi.wechat.entity.UserEntity;
 import com.zhishi.wechat.entity.WebTokenEntity;
 import com.zhishi.wechat.service.WxRequestService;
 import com.zhishi.wechat.util.DBCacheUtil;
-import com.zhishi.wechat.util.MD5Util;
 import com.zhishi.wechat.util.RestTemplateUtil;
 import com.zhishi.wechat.util.WxUtil;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +16,6 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 @Service
 public class WxRequestServiceImpl implements WxRequestService {

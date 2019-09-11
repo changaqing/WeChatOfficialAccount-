@@ -11,20 +11,25 @@ import java.util.*;
 
 public class WxUtil {
 
-    //0、天津智慧奇股
-    //appid：wx99b72692246dc645
-    //密钥：4b87afecefda860f4e51a865f9950a47
-
-    //1、天津知柿公众号
-    //appid：wx240ae221054c61d5
-    //密钥：e37afb6cb96d19a64dfbe08b3261e9fd
 
     private static final String[] APPIDS = {
-            "wx99b72692246dc645",
-            "wx240ae221054c61d5"};
+            "",
+            "",
+            ""};
     private static final String[] APPSECRETS = {
-            "4b87afecefda860f4e51a865f9950a47",
-            "e37afb6cb96d19a64dfbe08b3261e9fd"};
+            "",
+            "",
+            ""};
+
+    //小程序
+    private static final String[] SR_APPIDS = {
+            "",
+            ""};
+    private static final String[] SR_SECRETS = {
+            "",
+            ""};
+    public static String SR_APPID = SR_APPIDS[0];
+    public static String SR_SECRET = SR_SECRETS[0];
 
     public static String APPID = APPIDS[1];//默认是天津知柿
     public static String APPSECRET = APPSECRETS[1];
@@ -55,7 +60,13 @@ public class WxUtil {
             APPSECRET = APPSECRETS[type];
         }
     }
-
+    //设置使用哪一个小程序的信息
+    public static void setSR_APPID(Integer type) {
+        if (type != null) {
+            SR_APPID = SR_APPIDS[type];
+            SR_SECRET = SR_SECRETS[type];
+        }
+    }
     public static String randomUUID(int endIndex) {
         String uuid = UUID.randomUUID().toString();
         return StringUtils.remove(uuid, "-").substring(0, 16);
